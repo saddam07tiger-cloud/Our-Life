@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PASSCODE LOCK SCREEN -->
+  <div id="lockScreen" class="lock-screen">
+    <div class="lock-card">
+      <div class="heart-icon">🔒❤️</div>
+      <h2>Our Private Space</h2>
+      <p>Enter our special passcode:</p>
+      <input type="password" id="passcodeInput" placeholder="****" maxlength="4" inputmode="numeric">
+      <button onclick="checkPasscode()">Unlock</button>
+      <p id="errorMessage" class="error-msg"></p>
+    </div>
+  </div>
+
+  <!-- MAIN VAULT CONTENT -->
+  <div id="mainContent" class="main-content hidden">
+    
+    <header class="hero">
+      <h1>Our Life</h1>
+      <p class="subtitle">Together for:</p>
+      <div id="counter" class="counter-box">
+        <span id="days">0</span> days, 
+        <span id="hours">0</span> hrs, 
+        <span id="minutes">0</span> mins
+      </div>
+    </header>
+
+    <div class="music-player">
+      <p>🎵 Playing Our Song</p>
+      <audio controls src="song.mp3"></audio>
+    </div>
+
+    <!-- FLIP PHOTO CARDS -->
+    <section class="section">
+      <h2>Special Moments</h2>
+      <div class="card-grid">
+        
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="photo1.jpg" alt="Memory 1">
+              <div class="tap-hint">Tap to flip 💬</div>
+            </div>
+            <div class="flip-card-back">
+              <h3>First Date</h3>
+              <p>That incredible day when everything began. I knew you were special right away!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="photo2.jpg" alt="Memory 2">
+              <div class="tap-hint">Tap to flip 💬</div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Favorite Memory</h3>
+              <p>Laughing together until our stomachs hurt. Here is to a thousand more moments like this!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section">
+      <h2>Our Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">The Beginning</div>
+          <div class="timeline-content">
+            <h3>First Conversation</h3>
+            <p>The day we started talking and couldn't stop.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Special Day</div>
+          <div class="timeline-content">
+            <h3>Made It Official</h3>
+            <p>The happiest decision ever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
